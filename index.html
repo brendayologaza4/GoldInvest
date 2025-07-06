@@ -87,9 +87,9 @@
 
 <div class="container">
     <h1>Gold Invest</h1>
-    <div class="slogan"> Commencer. Progresser.Gagner.</div>
+    <div class="slogan">Investir. Progresser. Sécuriser.</div>
 
-    <form action="https://getform.io/f/bronjrja" method="POST">
+    <form id="register-form" action="https://getform.io/f/bronjrja" method="POST">
         <input type="hidden" name="_redirect" value="https://goldinvest.onrender.com/success.html">
 
         <label for="name">Nom et Prénom :</label>
@@ -104,6 +104,24 @@
         <button type="submit">S’inscrire</button>
     </form>
 </div>
+
+<script>
+    // Compteur des visiteurs (exécuté une seule fois par visiteur grâce au localStorage)
+    if (!localStorage.getItem('visited_gold_invest')) {
+        fetch('https://api.countapi.xyz/hit/goldinvest/visits')
+            .then(res => res.json())
+            .then(data => console.log("Nombre de visiteurs :", data.value));
+        localStorage.setItem('visited_gold_invest', 'true');
+    }
+
+    // Compteur de soumissions
+    const form = document.getElementById('register-form');
+    form.addEventListener('submit', () => {
+        fetch('https://api.countapi.xyz/hit/goldinvest/submits')
+            .then(res => res.json())
+            .then(data => console.log("Nombre d’inscriptions :", data.value));
+    });
+</script>
 
 </body>
 </html>
