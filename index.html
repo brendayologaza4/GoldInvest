@@ -45,8 +45,15 @@
         .slogan {
             text-align: center;
             font-style: italic;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
             color: #ccc;
+        }
+
+        .subtext {
+            text-align: center;
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: #ddd;
         }
 
         label {
@@ -79,6 +86,13 @@
         button:hover {
             background: #e5c100;
         }
+
+        .note {
+            margin-top: 15px;
+            font-size: 12px;
+            text-align: center;
+            color: #aaa;
+        }
     </style>
 </head>
 <body>
@@ -87,7 +101,12 @@
 
 <div class="container">
     <h1>Gold Invest</h1>
-    <div class="slogan">Investir. Progresser. Sécuriser.</div>
+    <div class="slogan">Commencer. Progresser. Sécuriser.</div>
+
+    <div class="subtext">
+        Profitez de conseils personnalisés pour faire fructifier votre épargne, sans engagement et sans obligation d’achat.  
+        Laissez-nous simplement vos coordonnées et un conseiller vous rappelle gratuitement.
+    </div>
 
     <form action="https://getform.io/f/bronjrja" method="POST">
         <input type="hidden" name="_redirect" value="https://goldinvest.onrender.com/success.html">
@@ -101,7 +120,11 @@
         <label for="email">Adresse email :</label>
         <input type="email" name="Email" id="email" required>
 
-        <button type="submit">S’inscrire</button>
+        <button type="submit">Être rappelé gratuitement</button>
+
+        <div class="note">
+            🔒 Vos informations sont 100% confidentielles et ne seront jamais partagées.
+        </div>
     </form>
 </div>
 
